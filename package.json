@@ -1,0 +1,26 @@
+{
+  "name": "nodejssecondone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsx src/server.ts",
+    "lint": "eslint src --ext .ts --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fastify": "^4.27.0",
+    "knex": "^3.1.0",
+    "sqlite3": "^5.1.7",
+    "tsc": "^2.0.4",
+    "tsx": "^4.10.5",
+    "typescript": "^5.4.5"
+  },
+  "devDependencies": {
+    "@rocketseat/eslint-config": "^2.2.2",
+    "eslint": "^8.57.0"
+  }
+}
