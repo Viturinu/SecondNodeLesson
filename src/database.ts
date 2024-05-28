@@ -1,5 +1,4 @@
 import { knex as setupKnex, Knex } from 'knex'
-import 'dotenv/config'
 import { env } from './env'
 
 if (!process.env.DATABASE_URL) {
@@ -18,4 +17,4 @@ export const config: Knex.Config = {
   },
 }
 
-export const knex = setupKnex(config)
+export const knex = setupKnex(config) //aqui está o export da variável knex - a variável real;
