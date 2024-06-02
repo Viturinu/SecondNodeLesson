@@ -17,4 +17,4 @@ export const config: Knex.Config = {
   },
 }
 
-export const knex = setupKnex(config) //aqui está o export da variável knex - a variável real;
+export const knex = setupKnex(config) // aqui está o export da variável knex - a variável real;

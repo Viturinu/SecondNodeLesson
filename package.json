@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "vitest",
     "knex": "node --no-warnings --import tsx ./node_modules/.bin/knex",
     "dev": "tsx src/server.ts",
     "lint": "eslint src --ext .ts --fix"
@@ -13,14 +13,17 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@fastify/cookie": "^9.3.1",
     "dotenv": "^16.4.5",
     "fastify": "^4.27.0",
+    "httpie": "^1.1.2",
     "knex": "^3.1.0",
     "node": "^22.2.0",
     "sqlite3": "^5.1.7",
     "tsc": "^2.0.4",
     "tsx": "^4.10.5",
     "typescript": "^5.4.5",
+    "vitest": "^1.6.0",
     "zod": "^3.23.8"
   },
   "devDependencies": {
