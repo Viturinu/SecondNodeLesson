@@ -1,4 +1,4 @@
-import crypto from 'crypto'
+import crypto from 'node:crypto'
 import { knex } from '../database'
 import { FastifyInstance } from 'fastify'
 import { z } from 'zod'

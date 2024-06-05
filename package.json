@@ -6,14 +6,16 @@
   "scripts": {
     "test": "vitest",
     "knex": "node --no-warnings --import tsx ./node_modules/.bin/knex",
-    "dev": "tsx src/server.ts",
-    "lint": "eslint src --ext .ts --fix"
+    "dev": "tsx watch src/server.ts",
+    "lint": "eslint src --ext .ts --fix",
+    "build": "tsup src --out-dir build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@fastify/cookie": "^9.3.1",
+    "@types/supertest": "^6.0.2",
     "dotenv": "^16.4.5",
     "fastify": "^4.27.0",
     "httpie": "^1.1.2",
@@ -29,6 +31,8 @@
   "devDependencies": {
     "@rocketseat/eslint-config": "^2.2.2",
     "@types/node": "^20.12.12",
-    "eslint": "^8.57.0"
+    "eslint": "^8.57.0",
+    "supertest": "^7.0.0",
+    "tsup": "^8.1.0"
   }
 }
