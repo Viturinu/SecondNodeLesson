@@ -11,9 +11,10 @@ if (process.env.NODE_ENV === 'test') {
 // process.env.DATABASE_URL
 
 const envSchema = z.object({
-  NODE_ENV: z.enum(['development', 'production', 'test']).default('production'),
+  NODE_ENV: z.enum(['development', 'production', 'test']).default('production'), // render já envia NODE_ENV como development, pelo que entendi, em ambiente de produção. Logo, trataremos a variavel enviada pelo RENDER lá na nuvem
   DATABASE_URL: z.string(),
-  PORT: z.number().default(3333),
+  DATABASE_CLIENT: z.enum(['sql', 'pg']),
+  PORT: z.coerce.number().default(3333), // render já envia PORT como development, pelo que entendi, em ambiente de produção, mas envia uma string por default, por isso usamos o coerce, pra coagir a transformação dessa String em Number. A porta erscolhida também é feita pela nuvem (provider), logo, trataremos a variavel enviada pelo RENDER lá na nuvem
 })
 
 export const _env = envSchema.safeParse(process.env) // O parse meio que faz uma confirmação da tipagem acima definida no zod (se der erro, lança uma excessão) ; já o safeParse não dispara um erro quando a verificação falha, ele retorna um objeto com informações sobre a conversão (incluindo o status da conversão com a variável success e data com os dados da conversão)
